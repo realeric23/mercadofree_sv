@@ -1,0 +1,27 @@
+{
+  "name": "mercadofree",
+  "version": "1.0.0",
+  "description": "An app to Search using MercadoLibre's API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Eric Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "install": "^0.13.0",
+    "nodemon": "^2.0.12",
+    "npm": "^7.20.1"
+  }
+}
