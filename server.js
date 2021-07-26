@@ -8,10 +8,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 const PORT = process.env.PORT || 5000;
-const PORT_FE = process.env.PORT || 3000;
-// const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
-// const client = redis.createClient(REDIS_PORT);
 const client = redis.createClient({
   host: process.env.REDIS_HOSTNAME,
   port: process.env.REDIS_PORT,
@@ -78,17 +75,6 @@ app.get('/api/search', cache, async (req, res, next) => {
     res.status(500);
   }
 });
-
-// Serve static assets if in production
-
-// if (process.env.NODE_ENV === 'production') {
-//Set static folder
-// app.use(express.static('client/build'));
-
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-// });
-// }
 
 // Cache
 function cache(req, res, next) {
